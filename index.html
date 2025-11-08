@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Local Food & Tech Mixer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-900 text-white">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="text-xl font-bold">
+          <span class="text-white">Local Food & Tech </span>
+          <span class="text-orange-600">Mixer</span>
+        </div>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8 text-sm">
+          <button type="button" data-scroll="problem" class="hover:text-orange-600 transition">문제</button>
+          <button type="button" data-scroll="solution" class="hover:text-orange-600 transition">솔루션</button>
+          <button type="button" data-scroll="benefits" class="hover:text-orange-600 transition">혜택</button>
+          <button type="button" data-scroll="trust" class="hover:text-orange-600 transition">신뢰</button>
+          <button type="button" data-scroll="pricing" class="hover:text-orange-600 transition">가격</button>
+          <button type="button" data-scroll="cta" class="bg-orange-600 hover:bg-orange-700 px-5 py-2 rounded-full transition">신청</button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button 
+          id="mobile-menu-button"
+          type="button"
+          class="md:hidden text-white"
+        >
+          <div class="w-6 h-5 flex flex-col justify-between">
+            <span class="w-full h-0.5 bg-white"></span>
+            <span class="w-full h-0.5 bg-white"></span>
+            <span class="w-full h-0.5 bg-white"></span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div 
+        id="mobile-menu"
+        class="md:hidden mt-4 pb-4 space-y-3 text-center hidden"
+      >
+        <button type="button" data-scroll="problem" class="block w-full py-2 hover:text-orange-600 transition">문제</button>
+        <button type="button" data-scroll="solution" class="block w-full py-2 hover:text-orange-600 transition">솔루션</button>
+        <button type="button" data-scroll="benefits" class="block w-full py-2 hover:text-orange-600 transition">혜택</button>
+        <button type="button" data-scroll="trust" class="block w-full py-2 hover:text-orange-600 transition">신뢰</button>
+        <button type="button" data-scroll="pricing" class="block w-full py-2 hover:text-orange-600 transition">가격</button>
+        <button type="button" data-scroll="cta" class="block w-full bg-orange-600 hover:bg-orange-700 py-2 rounded-full transition">신청</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="mb-8">
+        <span class="inline-block px-4 py-1.5 bg-orange-600/20 text-orange-600 rounded-full text-sm font-medium border border-orange-600/30">
+          🍸 대전 청년 전문가 커뮤니티
+        </span>
+      </div>
+      
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        퇴근 후, 대전의 가장 힙한<br />
+        <span class="text-orange-600">미식가/기술자 커뮤니티</span>가<br />
+        당신을 기다립니다
+      </h1>
+      
+      <p class="text-xl md:text-2xl text-gray-400 mb-12 leading-relaxed">
+        전공 지식으로 로컬 푸드 &amp; 기술을 엮어 만드는<br />
+        프리미엄 네트워킹 이벤트
+      </p>
+      
+      <button 
+        type="button"
+        data-scroll="cta"
+        class="bg-orange-600 hover:bg-orange-700 text-white px-10 py-4 rounded-full text-lg font-semibold transition inline-flex items-center gap-2 shadow-lg hover:shadow-orange-600/50"
+      >
+        1기 베타 테스터 신청하기
+        <span>&rarr;</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section id="problem" class="py-20 px-6 bg-gray-800/50">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="mb-6">
+        <span class="text-5xl">🤦‍♂️</span>
+      </div>
+      
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        '나만' 알고 있는 기술 지식,<br />
+        '나만' 홀로 외로운 네트워킹
+      </h2>
+      
+      <p class="text-xl text-gray-300 mb-12 leading-relaxed">
+        혹시 당신도 대전에서 활동하며 다음과 같은 외로움을 느끼고 있나요?
+      </p>
+      
+      <div class="grid md:grid-cols-3 gap-8 text-left">
+        <div class="bg-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-orange-600/50 transition">
+          <div class="text-orange-600 mb-4 text-3xl">👥</div>
+          <h3 class="text-xl font-bold mb-3">진짜 네트워킹의 부재</h3>
+          <p class="text-gray-400 leading-relaxed">
+            회사가 아닌 곳에서 나와 같은 2030 전문가/청년을 만나 깊이 있는 대화를 나눌 기회가 없습니다.
+          </p>
+          <span class="text-orange-600 text-sm font-medium mt-3 block">(고립감)</span>
+        </div>
+        
+        <div class="bg-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-orange-600/50 transition">
+          <div class="text-orange-600 mb-4 text-3xl">📍</div>
+          <h3 class="text-xl font-bold mb-3">만남의 장소 접근성 문제</h3>
+          <p class="text-gray-400 leading-relaxed">
+            친구들을 만나려면 복잡한 교통수단(버스/택시)을 이용해야 하는 불편함이 너무 큽니다.
+          </p>
+          <span class="text-orange-600 text-sm font-medium mt-3 block">(접근성 Pain Point)</span>
+        </div>
+        
+        <div class="bg-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-orange-600/50 transition">
+          <div class="text-orange-600 mb-4 text-3xl">💡</div>
+          <h3 class="text-xl font-bold mb-3">딱딱한 분위기</h3>
+          <p class="text-gray-400 leading-relaxed">
+            이름표 달고 명함 주고받는 '업무 연장선' 같은 모임이 지겹습니다. 편하고 솔직한 만남을 원합니다.
+          </p>
+        </div>
+      </div>
+      
+      <p class="text-lg text-gray-300 mt-12 leading-relaxed">
+        대전에서의 정주 기반을 다지고 싶다면, 이제 <span class="text-orange-600 font-semibold">'술자리 친화력'</span>과 <span class="text-orange-600 font-semibold">'전문 지식'</span>이 결합된<br />
+        새로운 만남의 장이 필요합니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- Solution Section -->
+  <section id="solution" class="py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="mb-6">
+        <span class="text-5xl">🤝</span>
+      </div>
+      
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        로컬 주류/식품 네트워커:<br />
+        <span class="text-orange-600">Local Food &amp; Tech Mixer</span>
+      </h2>
+      
+      <p class="text-xl text-gray-300 mb-16 leading-relaxed">
+        여러분의 <span class="text-orange-600 font-semibold">전공 지식(식품/생명공학)</span>과 <span class="text-orange-600 font-semibold">친화력(로컬 주류 사랑)</span>을 결합하여,<br />
+        대전의 청년 전문가들을 위한 가장 매력적인 정기 네트워킹 허브를 만듭니다.
+      </p>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-orange-600/30">
+          <div class="w-16 h-16 bg-orange-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">🔬</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">기술과 미식의 만남</h3>
+          <p class="text-gray-400 leading-relaxed">
+            지역의 특색 있는 식품 공장/양조장의 숨겨진 기술을 흥미로운 스토리텔링과 함께 전달합니다.
+          </p>
+        </div>
+        
+        <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-orange-600/30">
+          <div class="w-16 h-16 bg-orange-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">🚇</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">최적의 접근성</h3>
+          <p class="text-gray-400 leading-relaxed">
+            지하철/주요 거점에서 가장 접근성이 좋은 공간을 엄선하여 만남의 불편함을 해소합니다.
+          </p>
+        </div>
+        
+        <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-orange-600/30">
+          <div class="w-16 h-16 bg-orange-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">🍹</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">전문 지식 칵테일</h3>
+          <p class="text-gray-400 leading-relaxed">
+            전문성(Tech)을 친화력(Mixer)으로 풀어내, 딱딱하지 않은 즐거운 분위기에서 깊이 있는 교류를 가능하게 합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="benefits" class="py-20 px-6 bg-gray-800/50">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        당신이 'Local Food &amp; Tech Mixer'에<br />
+        참여해야 하는 <span class="text-orange-600">3가지 이유</span>
+      </h2>
+      
+      <div class="mt-16 space-y-8">
+        <div class="bg-gray-900 p-10 rounded-2xl border border-gray-700 text-left hover:border-orange-600/50 transition">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="text-orange-600 text-3xl flex-shrink-0">✅</div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2">[네트워킹] 대전 Top Class 'Tech' Youngsters와의 격월 정기 만남</h3>
+              <p class="text-gray-400 text-lg leading-relaxed">
+                20대 청년 전문가들의 비즈니스적 협업을 넘어선, 인생 멘토링/멘티 관계로 발전할 수 있는 강력한 커뮤니티입니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-gray-900 p-10 rounded-2xl border border-gray-700 text-left hover:border-orange-600/50 transition">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="text-orange-600 text-3xl flex-shrink-0">✅</div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2">[경험] 전문가가 직접 기획하는 로컬 푸드 &amp; 주류 콜라보레이션</h3>
+              <p class="text-gray-400 text-lg leading-relaxed">
+                플라스미드 추출 기술을 가진 식품공학 전문가가 로컬 양조장과 협력하여 '기술' 기반의 특별 시음/시식 이벤트를 매번 새롭게 기획합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-gray-900 p-10 rounded-2xl border border-gray-700 text-left hover:border-orange-600/50 transition">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="text-orange-600 text-3xl flex-shrink-0">✅</div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2">[정주 기반] 불편함 없는 '만남의 장'과 폭발적 친화력</h3>
+              <p class="text-gray-400 text-lg leading-relaxed">
+                단순한 술자리가 아닌, <span class="text-orange-600 font-semibold">'꾸준한 교류와 성장'</span>을 위한 대학 선배 네트워크 등 강력한 지역 정주 기반을 활용하여 당신의 성장을 돕습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Section -->
+  <section id="trust" class="py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="mb-6">
+        <div class="text-orange-600 mx-auto text-5xl">⭐</div>
+      </div>
+      
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        함께 만들고 있는 신뢰의 로드맵
+      </h2>
+      
+      <p class="text-xl text-gray-300 mb-12 leading-relaxed">
+        저희는 단순한 모임 주최자가 아닌,<br />
+        지역 정주형 창직을 목표로 하는 커뮤니티 리더입니다.
+      </p>
+      
+      <div class="grid md:grid-cols-3 gap-8 text-left">
+        <div class="bg-gray-900 p-8 rounded-2xl border border-gray-700">
+          <div class="text-orange-600 mb-4 text-3xl">📅</div>
+          <h3 class="text-xl font-bold mb-3 text-orange-600">MVP 계획</h3>
+          <p class="text-gray-400 leading-relaxed mb-3">
+            월 1회, 지역 내 접근성이 좋은 특정 술집/공간 섭외 및 콜라보레이션 시음/시식 이벤트 개최
+          </p>
+          <p class="text-sm text-gray-500">
+            목적: 20대 청년들의 '교류 선호도'와 '접근성' 검증
+          </p>
+        </div>
+        
+        <div class="bg-gray-900 p-8 rounded-2xl border border-gray-700">
+          <div class="text-orange-600 mb-4 text-3xl">👥</div>
+          <h3 class="text-xl font-bold mb-3 text-orange-600">협력 기관/자원</h3>
+          <p class="text-gray-400 leading-relaxed mb-3">
+            지역 주류 기업 (예: 선양소주), 대학교 선배 네트워크
+          </p>
+          <p class="text-sm text-gray-500">
+            지역 산업 및 인적 네트워크를 활용한 공신력 및 콘텐츠 차별화
+          </p>
+        </div>
+        
+        <div class="bg-gray-900 p-8 rounded-2xl border border-gray-700">
+          <div class="text-orange-600 mb-4 text-3xl">📈</div>
+          <h3 class="text-xl font-bold mb-3 text-orange-600">리더의 강점</h3>
+          <p class="text-gray-400 leading-relaxed mb-3">
+            실행력, 친화력, 전문 지식(식품공학)
+          </p>
+          <p class="text-sm text-gray-500">
+            안정적인 이벤트 운영 및 참여자 간의 활발한 네트워킹 촉진
+          </p>
+        </div>
+      </div>
+      
+      <div class="mt-12 p-8 bg-gradient-to-r from-orange-600/20 to-orange-600/10 rounded-2xl border border-orange-600/30">
+        <p class="text-xl font-semibold text-orange-600">
+          "당신의 참여는 대전 청년 전문가 커뮤니티의 기준이 됩니다."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-20 px-6 bg-gray-800/50">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="mb-6">
+        <span class="text-5xl">🎁</span>
+      </div>
+      
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        1기 베타 테스터 '프리미엄 얼리버드' 특별 초대
+      </h2>
+      
+      <p class="text-xl text-orange-600 font-semibold mb-12">
+        선착순 30명 한정
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div class="bg-gray-900 p-8 rounded-2xl border border-gray-700">
+          <h3 class="text-xl font-bold mb-4">일반 참여 가격 (예정)</h3>
+          <div class="text-4xl font-bold mb-2">45,000원</div>
+          <p class="text-gray-400 text-sm mb-4">월 1회 네트워킹 모임</p>
+          <p class="text-gray-500 text-sm">모임 운영비, 시음/시식 비용 포함</p>
+        </div>
+        
+        <div class="bg-gradient-to-br from-orange-600 to-orange-700 p-8 rounded-2xl border-2 border-orange-500 relative">
+          <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-white text-orange-600 px-4 py-1 rounded-full text-sm font-bold">
+            베타 특가
+          </div>
+          <h3 class="text-xl font-bold mb-4">1기 베타 테스터 특별가</h3>
+          <div class="text-5xl font-bold mb-2">29,000원</div>
+          <p class="text-orange-100 text-sm mb-4">월 1회 네트워킹 모임</p>
+          <div class="bg-white/20 rounded-xl p-4 text-left text-sm">
+            <p class="font-semibold mb-2">✨ 추가 혜택:</p>
+            <p class="text-orange-50">
+              1회 모임 후, 참여자 전용 '지역 기업 현장 방문' 이벤트 우선권 제공
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-8 p-6 bg-gray-900 rounded-xl border border-gray-700 max-w-2xl mx-auto text-left">
+        <p class="text-sm text-gray-400 leading-relaxed">
+          <span class="text-orange-600 font-semibold">[필독]</span> 본 가격은 MVP 검증을 위한 초기 모객 비용입니다. 모임의 질적 향상을 위해 1기 이후에는 정상 가격으로 인상될 예정입니다.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="cta" class="py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+        지금, 가장 힙한 대전 커뮤니티의<br />
+        <span class="text-orange-600">첫 페이지를 함께 만드세요!</span>
+      </h2>
+      
+      <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+        더 이상 외롭게 혼자 있지 마세요.<br />
+        당신의 전문성과 친화력을 폭발시킬 수 있는 만남의 장이 준비되어 있습니다.
+      </p>
+      
+      <div class="mb-8">
+        <span class="inline-block px-6 py-2 bg-orange-600/20 text-orange-600 rounded-full text-lg font-bold border border-orange-600">
+          선착순 30명, 마감 임박!
+        </span>
+      </div>
+      
+      <button 
+        type="button"
+        class="bg-orange-600 hover:bg-orange-700 text-white px-12 py-5 rounded-full text-xl font-bold transition inline-flex items-center gap-3 shadow-2xl hover:shadow-orange-600/50 hover:scale-105 transform"
+      >
+        지금 바로 1기 베타 테스터 신청하고 특별 혜택 받기
+        <span>&rarr;</span>
+      </button>
+      
+      <p class="text-gray-500 text-sm mt-8">
+        신청 문의: contact@localfoodtech.com
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 px-6 border-t border-gray-800">
+    <div class="max-w-6xl mx-auto text-center text-gray-500 text-sm">
+      <p class="mb-2">© 2025 Local Food &amp; Tech Mixer. All rights reserved.</p>
+      <p>대전 청년 전문가를 위한 프리미엄 네트워킹 커뮤니티</p>
+    </div>
+  </footer>
+
+  <!-- Simple JS for scrolling and mobile menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const scrollButtons = document.querySelectorAll('[data-scroll]');
+
+      function scrollToSection(id) {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+        }
+      }
+
+      scrollButtons.forEach((btn) => {
+        btn.addEventListener('click', function () {
+          const target = this.getAttribute('data-scroll');
+          if (target) {
+            scrollToSection(target);
+          }
+        });
+      });
+
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function () {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
